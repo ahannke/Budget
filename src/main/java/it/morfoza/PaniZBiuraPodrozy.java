@@ -1,5 +1,6 @@
 package it.morfoza;
 
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -7,12 +8,15 @@ import java.util.Scanner;
  */
 public class PaniZBiuraPodrozy {
 
-    String name = "Zuzia";
-    public Destination chlamDoOpchniecia;
-    public Destination superOferta;
+    private String name = "Zuzia";
+    private List<Destination> allDestinations;
+
+    public PaniZBiuraPodrozy(List<Destination> allDestinations) {
+        this.allDestinations = allDestinations;
+    }
 
     public void zrobWywiad() throws BrakKlientaException {
-        System.out.println("Dzień dobry, mam na imię " + name);
+        System.out.println("Dzień dobry, mam na imię " + name + ".");
         Scanner input = new Scanner(System.in);
 
         double number1;
@@ -31,14 +35,11 @@ public class PaniZBiuraPodrozy {
         double dailyBudget = number1 / number2;
         System.out.println("Twój dzienny budżet to: " + dailyBudget);
 
-        if (dailyBudget >= chlamDoOpchniecia.pricePerDay) {
-            System.out.println("Możesz jechać do " + chlamDoOpchniecia.name);
-        }
-        if (dailyBudget >= superOferta.pricePerDay) {
-            System.out.println("Możesz jechać do " + superOferta.name);
-        } else if (dailyBudget < 30) {
-            System.out.println("Nie stać cię na wakacje. Idź zarobić hajs.");
-        }
+        // sprawdz ktna ore oferty z listy stac klienta
+
+        // pokaz te oferty
+
+
     }
 
 }
