@@ -44,7 +44,7 @@ public class Budget {
         sraka.add(new Destination("Białoruś", 59, 800));
         sraka.add(new Destination("Kanary", 249, 2800));
 
-        getAffordableDestinations(sraka);
+        getAffordableDestinations(sraka, 230);
 
 //        int dupa = 1;
 //        milaPaniZBiura.zrobWywiad();
@@ -55,10 +55,12 @@ public class Budget {
 //        System.out.println(wymarzoneMiejsce);
     }
 
-   public static List<Destination> getAffordableDestinations(List<Destination> destinations){
+   public static List<Destination> getAffordableDestinations(List<Destination> destinations, double dailyBuget){
 
         for (Destination destination : destinations){
-            System.out.println(destination);
+            if (destination.pricePerDay<=dailyBuget) {
+                System.out.println(destination);
+            }
         }
 
         return null;
