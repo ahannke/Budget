@@ -1,8 +1,8 @@
 package it.morfoza;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Created by ahann on 02/08/2016.
@@ -44,7 +44,10 @@ public class Budget {
         sraka.add(new Destination("Białoruś", 59, 800));
         sraka.add(new Destination("Kanary", 249, 2800));
 
-        getAffordableDestinations(sraka, 230);
+        List<Destination> affordableDestinations;
+        affordableDestinations = getAffordableDestinations(sraka, 230);
+        System.out.println("Oto lista destynacji na ktore Cię stac:" + affordableDestinations);
+        System.out.println(affordableDestinations);
 
 //        int dupa = 1;
 //        milaPaniZBiura.zrobWywiad();
@@ -57,13 +60,17 @@ public class Budget {
 
    public static List<Destination> getAffordableDestinations(List<Destination> destinations, double dailyBuget){
 
+       List<Destination> affordableDestinations = new LinkedList<>();
+
+       affordableDestinations.add();
+
         for (Destination destination : destinations){
             if (destination.pricePerDay<=dailyBuget) {
                 System.out.println(destination);
             }
         }
 
-        return null;
+        return affordableDestinations;
 
     }
 
