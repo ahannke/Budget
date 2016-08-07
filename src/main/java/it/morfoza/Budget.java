@@ -62,13 +62,13 @@ public class Budget {
 
        List<Destination> affordableDestinations = new LinkedList<>();
 
-       affordableDestinations.add(new Destination("Tajlandia", 215, 6500));
-       affordableDestinations.add(new Destination("Białoruś", 59, 800));
-       affordableDestinations.add(new Destination("Kanary", 249, 2800));
+//       affordableDestinations.add(new Destination("Tajlandia", 215, 6500));
+//       affordableDestinations.add(new Destination("Białoruś", 59, 800));
+//       affordableDestinations.add(new Destination("Kanary", 249, 2800));
 
         for (Destination destination : destinations){
             if (destination.pricePerDay<=dailyBuget) {
-                System.out.println(destination);
+                affordableDestinations.add(destination);
             }
         }
 
