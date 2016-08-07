@@ -5,6 +5,10 @@ package it.morfoza;
  */
 public class Destination {
 
+    public String toString(){
+       return "Miejsce: [" + name + "]";
+    }
+
     public String name;
     public double pricePerDay;
     public int howFar;
