@@ -10,8 +10,8 @@ import java.util.Scanner;
 public class Budget {
 
 
-
     public static void main(String[] args) throws BrakKlientaException {
+
 
         PaniZBiuraPodrozy milaPaniZBiura = new PaniZBiuraPodrozy();
 
@@ -22,10 +22,23 @@ public class Budget {
 
 //        milaPaniZBiura.chlamDoOpchniecia = wymarzoneMiejsce;
 
-        List<Destination> destinations = new ArrayList<>();
-        destinations.add(new Destination("Thailand", 215, 6500));
+        public List<Destination> getAffordableDestination List<Destination> destinations;
+        (List <Destination> destinations) {
+            destinations = new ArrayList<>();
+            for (Destination destination : destinations) {
+                if (.dailyBudget >= destination.pricePerDay); Destination affordableDestination;
+                {
+                    affordableDestination.add(destination);
 
+                }
+                return affordableDestination;
+            }
 
+//            destinations.add(new Destination("Tajlandia", 215, 6500));
+//            destinations.add(new Destination("Białoruś", 59, 800));
+//            destinations.add(new Destination("Kanary", 249, 2800));
+
+        }
 
 
         int dupa = 1;
