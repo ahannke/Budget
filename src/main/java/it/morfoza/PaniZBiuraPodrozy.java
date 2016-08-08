@@ -17,6 +17,8 @@ public class PaniZBiuraPodrozy {
 
     double number1;
     double number2;
+  //  public double dailyBudget = number1 / number2;
+
 
     public PaniZBiuraPodrozy(List<Destination> allDestinations) {
         this.allDestinations = allDestinations;
@@ -26,8 +28,8 @@ public class PaniZBiuraPodrozy {
         System.out.println("Dzień dobry, mam na imię " + name + ".");
         Scanner input = new Scanner(System.in);
 
-        double number1;
-        double number2;
+//        double number1;
+//        double number2;
 
         System.out.println("Ile masz hajsu na wakacje? (podaj w PLN)");
         number1 = input.nextInt();
@@ -45,15 +47,14 @@ public class PaniZBiuraPodrozy {
         // sprawdz na ktore oferty z listy stac klienta
 
         // pokaz te oferty
+        showAffordableDestinations(dailyBudget);
+
+
 
     }
 
-    public void showAffordableDestinations(double dailyBudget) {
-        List<Destination> allDestinations = new ArrayList<>();
-        allDestinations.add(new Destination("Tajlandia", 215, 6500));
-        allDestinations.add(new Destination("Białoruś", 59, 800));
-        allDestinations.add(new Destination("Kanary", 249, 2800));
 
+    public void showAffordableDestinations(double dailyBudget) {
         List<Destination> affordableDestinations = getAffordableDestinations(allDestinations, dailyBudget);
         System.out.println("Oto lista wszystkich  destynacji: " + allDestinations);
         System.out.println("Oto lista destynacji na ktore Cię stac:" + affordableDestinations);

@@ -1,7 +1,6 @@
 package it.morfoza;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -22,7 +21,8 @@ public class Budget {
         PaniZBiuraPodrozy milaPaniZBiura = new PaniZBiuraPodrozy(allDestinations);
 
         milaPaniZBiura.zrobWywiad();
-        milaPaniZBiura.showAffordableDestinations(double dailyBudget);
+//        milaPaniZBiura.showAffordableDestinations(milaPaniZBiura.dailyBudget);
+//        milaPaniZBiura.getAffordableDestinations(List<Destination> , milaPaniZBiura.dailyBudget);
 
 
     }
