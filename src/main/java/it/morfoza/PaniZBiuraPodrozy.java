@@ -17,8 +17,6 @@ public class PaniZBiuraPodrozy {
 
     double number1;
     double number2;
-  //  public double dailyBudget = number1 / number2;
-
 
     public PaniZBiuraPodrozy(List<Destination> allDestinations) {
         this.allDestinations = allDestinations;
@@ -27,9 +25,6 @@ public class PaniZBiuraPodrozy {
     public void zrobWywiad() throws BrakKlientaException {
         System.out.println("Dzień dobry, mam na imię " + name + ".");
         Scanner input = new Scanner(System.in);
-
-//        double number1;
-//        double number2;
 
         System.out.println("Ile masz hajsu na wakacje? (podaj w PLN)");
         number1 = input.nextInt();
@@ -48,11 +43,7 @@ public class PaniZBiuraPodrozy {
 
         // pokaz te oferty
         showAffordableDestinations(dailyBudget);
-
-
-
     }
-
 
     public void showAffordableDestinations(double dailyBudget) {
         List<Destination> affordableDestinations = getAffordableDestinations(allDestinations, dailyBudget);
