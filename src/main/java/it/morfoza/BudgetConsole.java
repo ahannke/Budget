@@ -3,15 +3,10 @@ package it.morfoza;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by ahann on 02/08/2016.
- */
-public class Budget {
 
+public class BudgetConsole {
 
-
-    public static void main(String[] args) throws BrakKlientaException {
-
+    public static void budgetConsole(String[] args) throws BrakKlientaException {
 
         List<Destination> allDestinations = new ArrayList<>();
         allDestinations.add(new Destination("Tajlandia", 215, 6500));
@@ -21,11 +16,6 @@ public class Budget {
         PaniZBiuraPodrozy milaPaniZBiura = new PaniZBiuraPodrozy(allDestinations);
 
         milaPaniZBiura.zrobWywiad();
-
-
     }
-
-
-
 
 }

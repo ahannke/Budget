@@ -22,5 +22,4 @@ public class Destination {
         this.howFar = howFar;
     }
 
-
 }
