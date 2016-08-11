@@ -1,5 +1,6 @@
 package it.morfoza;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
@@ -11,18 +12,19 @@ import java.util.Scanner;
 /**
  * Created by ahann on 02/08/2016.
  */
+@Component
 public class Grazynka implements PaniZBiuraPodrozy {
 
     private String name = "Zuzia";
-    private List<Destination> allDestinations;
+    private DestinationRepository destinationRepository;
 
     double number1;
     double number2;
 
-    public Grazynka(List<Destination> allDestinations) {
-        this.allDestinations = allDestinations;
+    @Autowired
+    public Grazynka(DestinationRepository destinationRepository) {
+        this.destinationRepository = destinationRepository;
     }
-
 
     public void zrobWywiad() throws BrakKlientaException {
         System.out.println("Dzień dobry, mam na imię " + name + ".");
@@ -49,8 +51,8 @@ public class Grazynka implements PaniZBiuraPodrozy {
 
 
     public void showAffordableDestinations(double dailyBudget) {
-        List<Destination> affordableDestinations = getAffordableDestinations(allDestinations, dailyBudget);
-        System.out.println("Oto lista wszystkich  destynacji: " + allDestinations);
+        List<Destination> affordableDestinations = getAffordableDestinations(destinationRepository.getAllDestinations(), dailyBudget);
+        System.out.println("Oto lista wszystkich  destynacji: " + destinationRepository.getAllDestinations());
         System.out.println("Oto lista destynacji na które Cię stać:" + affordableDestinations);
 
     }
@@ -71,7 +73,7 @@ public class Grazynka implements PaniZBiuraPodrozy {
     @Override
     public SuggestedTripsOffer getAffordableDestinations(int totalBudget, int numberOfDays) {
         int dailyBuget = totalBudget / numberOfDays;
-        List<Destination> affordableDestinations = getAffordableDestinations(allDestinations, dailyBuget);
+        List<Destination> affordableDestinations = getAffordableDestinations(destinationRepository.getAllDestinations(), dailyBuget);
         return new SuggestedTripsOffer(dailyBuget, affordableDestinations);
     }
 
