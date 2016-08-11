@@ -48,7 +48,8 @@ public class PaniZBiuraPodrozy {
     public void showAffordableDestinations(double dailyBudget) {
         List<Destination> affordableDestinations = getAffordableDestinations(allDestinations, dailyBudget);
         System.out.println("Oto lista wszystkich  destynacji: " + allDestinations);
-        System.out.println("Oto lista destynacji na ktore Cię stac:" + affordableDestinations);
+        System.out.println("Oto lista destynacji na które Cię stać:" + affordableDestinations);
+
     }
 
     public List<Destination> getAffordableDestinations(List<Destination> destinations, double dailyBudget) {
