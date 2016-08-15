@@ -13,6 +13,10 @@ public class Destination {
     public double pricePerDay;
     public int howFar;
 
+    public boolean equals(Object obj){
+        return true;
+    }
+
     // TU byłem! Tony Halik.
 
     public Destination(String name, double pricePerDay, int howFar) {
@@ -21,5 +25,7 @@ public class Destination {
         this.pricePerDay = pricePerDay;
         this.howFar = howFar;
     }
+
+
 
 }

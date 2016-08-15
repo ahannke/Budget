@@ -15,7 +15,7 @@ import java.util.Scanner;
 @Component
 public class Grazynka implements PaniZBiuraPodrozy {
 
-    private String name = "Zuzia";
+    private String name = "Grażynka";
     private DestinationRepository destinationRepository;
 
     double number1;

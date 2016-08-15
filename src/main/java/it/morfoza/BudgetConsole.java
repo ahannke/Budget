@@ -13,7 +13,7 @@ public class BudgetConsole {
         allDestinations.add(new Destination("Białoruś", 59, 800));
         allDestinations.add(new Destination("Kanary", 249, 2800));
 
-        Grazynka milaPaniZBiura = new Grazynka(allDestinations);
+        Grazynka milaPaniZBiura = new Grazynka((DestinationRepository) allDestinations);
 
         milaPaniZBiura.zrobWywiad();
     }
